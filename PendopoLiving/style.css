@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper Utama */
+#roleWrapper, .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Container Tombol Pilihan Role */
+#roleContainer, .wrapper form {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+#roleTitle, h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#roleButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.role-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    width: 45%; /* Menyediakan dua tombol dalam satu baris */
+}
+
+.role-button-container img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.role-info h3 {
+    font-size: 22px; /* Increase the font size of the role title */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.role-info p {
+    font-size: 16px; /* Increase description font size */
+    color: #666;
+}
+
+.role-button-container button {
+    margin-top: 10px;
+    padding: 15px 25px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.role-button-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling Form Login, Register, Reset Password */
+#loginForm, .wrapper form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px; /* Lebar maksimum form */
+}
+
+/* Styling Input Field */
+.input-container, .input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container label, .input-box input::placeholder {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"],
+.input-box input {
+    width: 100%;
+    padding: 12px 40px 12px 12px; /* Menambahkan padding untuk memberi ruang untuk ikon */
+    border-radius: 30px; /* Menambahkan border-radius untuk sudut melengkung */
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.show-password-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.show-password-container label {
+    margin-left: 5px;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 30px; /* Menambahkan border-radius pada tombol */
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Links Styling */
+.links {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Desain Responsif untuk Layar Kecil */
+@media (max-width: 768px) {
+    #roleButtons {
+        flex-direction: column;
+    }
+
+    .role-button-container {
+        width: 80%;
+    }
+
+    .input-container input[type="text"],
+    .input-container input[type="password"],
+    .input-box input {
+        font-size: 14px;
+        padding: 10px 35px 10px 10px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+
+    .links a {
+        font-size: 12px;
+    }
+}
+
+/* Styling for the forgot password form */
+.forgot-password-wrapper form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.forgot-password-wrapper input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.forgot-password-wrapper button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.forgot-password-wrapper button:hover {
+    background-color: #218838;
+}
+
+.forgot-password-wrapper a {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password-wrapper a:hover {
+    text-decoration: underline;
+}
+
+/* Styling link "Sudah punya akun?" */
+.wrapper p {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333; /* Memberikan warna teks yang sedikit lebih gelap */
+}
+
+.wrapper p a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.wrapper p a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Biru lebih gelap saat hover */
+}
